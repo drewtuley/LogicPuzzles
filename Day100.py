@@ -40,10 +40,6 @@ for row1 in permutations(number_pool, 4):
                         number_pool4 = copy_except(number_pool3, row3)
                         for row4 in permutations(number_pool4, 4):
                             if row4[0] == 1 and check_columns(row1, row2, row3, row4):
-                                # (row1[0] + row2[0] + row3[0] + row4[0]) == 30 and \
-                                # (row1[1] + row2[1] + row3[1] + row4[1]) == 30 and \
-                                # (row1[2] + row2[2] + row3[2] + row4[2]) == 30 and \
-                                # (row1[3] + row2[3] + row3[3] + row4[3]) == 30:
                                 sol = list(row1) + list(row2) + list(row3) + list(row4)
                                 if sol not in solutions:
                                     solutions.append(sol)
